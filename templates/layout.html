@@ -15,19 +15,18 @@
 	
 	<link  rel="stylesheet" href="{{url_for('static',filename='style.css')}}" type="text/css">
     
-    <title>Broadway Data - {% block title %}{% endblock %}</title>
+    <title>Airport Data - {% block title %}{% endblock %}</title>
   </head>
   <body>
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href=".">Broadway Data</a>
+          <a class="navbar-brand" href=".">Airport Data</a>
         </div>
         <ul class="nav navbar-nav">
           <li {% if active_page == "about" %} class="active"{% endif %}><a href=".">About the Data</a></li>
-          <li {% if active_page == "popularity" %} class="active"{% endif %}><a href="popularity">Popularity of Shows and Theatres</a></li>
-          <li {% if active_page == "databyshow" %} class="active"{% endif %}><a href="databyshow">Data by Show</a></li>
-          <li {% if active_page == "spending" %} class="active"{% endif %}><a href="spending">Spending on Broadway Shows</a></li>
+          <li {% if active_page == "delaybytime" %} class="active"{% endif %}><a href="popularity">Airport With Most Delays</a></li>
+          <li {% if active_page == "delaybyairport" %} class="active"{% endif %}><a href="delaybyairport">Month With Most Delays</a></li>
         </ul>
       </div>
     </nav>
