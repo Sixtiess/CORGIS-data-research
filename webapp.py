@@ -9,20 +9,20 @@ app = Flask(__name__)
 
 @app.route('/')
 def render_about():
-    return render_template('about.html')
+    return render_template('home.html')
 
-@app.route('/popularity')
+@app.route('/delaybytime')
 def render_delaybytime():
     with open('airlines.json') as airlines_data:
         months = json.load(airlines_data)
     return render_template("mostDelayedAirport.html")
     
 
-@app.route('/databyshow')
+@app.route('/delaybyairport')
 def render_delaybyairport():
     with open('airlines.json') as airlines_data:
         months = json.load(airlines_data)
-    return render_template("mostDelayedMonths.html")
+    return render_template("mostDelayedMonth.html")
  
 def is_localhost():
     """ Determines if app is running on localhost or not
